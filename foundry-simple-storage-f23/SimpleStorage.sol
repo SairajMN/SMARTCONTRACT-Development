@@ -1,6 +1,7 @@
+// I'm a comment!
 // SPDX-License-Identifier: MIT
 
-pragma solidity 0.8.19;
+pragma solidity ^0.8.18;
 
 // pragma solidity ^0.8.0;
 // pragma solidity >=0.8.0 <0.9.0;
@@ -13,12 +14,11 @@ contract SimpleStorage {
         string name;
     }
     // uint256[] public anArray;
-
     Person[] public listOfPeople;
 
     mapping(string => uint256) public nameToFavoriteNumber;
 
-    function store(uint256 _favoriteNumber) public {
+    function store(uint256 _favoriteNumber) public virtual {
         myFavoriteNumber = _favoriteNumber;
     }
 
@@ -31,3 +31,9 @@ contract SimpleStorage {
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
+
+contract SimpleStorage2 {}
+
+contract SimpleStorage3 {}
+
+contract SimpleStorage4 {}
