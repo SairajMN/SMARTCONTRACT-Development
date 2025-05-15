@@ -1,13 +1,12 @@
-// I'm a comment!
 // SPDX-License-Identifier: MIT
 
-pragma solidity ^0.8.18;
+pragma solidity ^0.8.18; //im using 0.8.18 
 
 // pragma solidity ^0.8.0;
 // pragma solidity >=0.8.0 <0.9.0;
 
-contract SimpleStorage {
-    uint256 myFavoriteNumber;
+contract simplestorage {
+    uint256 favnumber;
 
     struct Person {
         uint256 favoriteNumber;
@@ -19,21 +18,23 @@ contract SimpleStorage {
     mapping(string => uint256) public nameToFavoriteNumber;
 
     function store(uint256 _favoriteNumber) public virtual {
-        myFavoriteNumber = _favoriteNumber;
+        favnumber = _favoriteNumber;
     }
 
+    // view reads the function and return the value, pure only returns the given value
     function retrieve() public view returns (uint256) {
-        return myFavoriteNumber;
+        return favnumber;
     }
 
+    // (memory, calldata) used for temp storage pf values, storage used for peremanent storage
     function addPerson(string memory _name, uint256 _favoriteNumber) public {
         listOfPeople.push(Person(_favoriteNumber, _name));
         nameToFavoriteNumber[_name] = _favoriteNumber;
     }
 }
 
-contract SimpleStorage2 {}
+contract simplestorage2 {}
 
-contract SimpleStorage3 {}
+contract simplestorage3 {}
 
-contract SimpleStorage4 {}
+contract simplestorage4 {}

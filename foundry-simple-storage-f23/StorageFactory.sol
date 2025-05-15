@@ -2,23 +2,23 @@
 
 pragma solidity ^0.8.18;
 
-import {SimpleStorage} from "./SimpleStorage.sol";
+import {simplestorage} from "./simplestorage.sol";
 
-contract StorageFactory{
+contract storagefactory{
 
-    SimpleStorage[] public listOfsimpleStorageContracts;
+    simplestorage[] public listOfsimplestorageContracts;
 
-    function createSimpleStorageContract() public {
-        SimpleStorage newsimpleStorageContract = new SimpleStorage();
-        listOfsimpleStorageContracts.push(newsimpleStorageContract);
+    function createsimplestorageContract() public {
+        simplestorage newsimplestorageContract = new simplestorage();
+        listOfsimplestorageContracts.push(newsimplestorageContract);
     }
 
-    function sfStore(uint256 _simpleStorageIndex, uint256 _newSimpleStorageNumber) public {
+    function sfStore(uint256 _simplestorageIndex, uint256 _newsimplestorageNumber) public {
 
-        listOfsimpleStorageContracts[_simpleStorageIndex].store(_newSimpleStorageNumber);
+        listOfsimplestorageContracts[_simplestorageIndex].store(_newsimplestorageNumber);
     }
 
-    function sfGet(uint256 _simpleStorageIndex) public view returns(uint256) {
-        return listOfsimpleStorageContracts[_simpleStorageIndex].retrieve();
+    function sfGet(uint256 _simplestorageIndex) public view returns(uint256) {
+        return listOfsimplestorageContracts[_simplestorageIndex].retrieve();
     }
 }
