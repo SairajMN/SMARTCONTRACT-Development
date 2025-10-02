@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: MIT
-pragma solidity 0.8.18; //selecting versions it's imp to select the needed version
+pragma solidity ^0.8.18; //selecting versions it's imp to select the needed version
 
 contract simplestorage { // contract keyword is used to create contracts "contract name {code}"
     uint256 favnum; //defining the variable named favnum with uint type " there are many types of keywords to define types ex: bool (boolean value T/F 0/1 True/False), uint (unsigned intger the positive whole numbers only default 256 bits), int (signed intger val positive or negetive whole numbers), address (used to add wallet address), bytes (basically a string type has limit of 32 bits)"
@@ -27,3 +27,6 @@ contract simplestorage { // contract keyword is used to create contracts "contra
     }
 
 }
+
+contract simplestorage2 {}
+contract simplestorage3 {}
