@@ -1,0 +1,141 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_favnums",
+						"type": "uint256"
+					}
+				],
+				"name": "add",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "finder",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "listofplp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favnums",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "names",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "ret",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_new",
+						"type": "uint256"
+					}
+				],
+				"name": "store",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/addfive.sol": "add"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/SimpleStorage.sol": {
+			"keccak256": "0x17429c25a8e79ae5d4e36982d61086da9046aa3f5f07b0f4e97c969d21fbeac6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://73242286502e2d0fd88326b7e4c03dbe17700df882a6762b581132d3c8fe9e92",
+				"dweb:/ipfs/QmPZm5kK53E5g5beaM9s2bVYCYQvmUKZCPPNA9UBCG6xkf"
+			]
+		},
+		"contracts/addfive.sol": {
+			"keccak256": "0x477df2420effd0107743fae71b64e08668cde20293ba8ddb2d59a0ad105909b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3a73fa2928631d8adcf86e8c49d2f6c54b26047ef877eaf0ce03c1585a8dafbf",
+				"dweb:/ipfs/QmcbWBjt2wd2huzW9NqpQddEiJj7S6m255D6CdHWC22oPn"
+			]
+		}
+	},
+	"version": 1
+}
