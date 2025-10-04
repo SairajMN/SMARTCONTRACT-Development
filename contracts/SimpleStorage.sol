@@ -13,12 +13,12 @@ contract simplestorage { // contract keyword is used to create contracts "contra
 
     mapping (string => uint256) public finder; //adding the mapping to find the fav num of a plp by his name the mapping keyword used to map the key to value like dictionary in python "mapping (key => value) public name of mapping" the public keyword used to make the mapping visible to other devs and to create the getter function to get the value of the key 
 
-    function store(uint256 _fav) public virtual { //function keyword is used to define function to perform in smart contracts "function name(parameters :parameters must be diff from the declared var coz u don't want to have an error in declaration) defining the function in "public : so the other dev can view the function and mod it" "
-        favnum = _fav;
+    function store(uint256 _fav) public virtual { //function keyword is used to define function to perform in smart contracts "function name(parameters :parameters must be diff from the declared var coz u don't want to have an error in declaration) defining the function in "public : so the other dev can view the function and mod it" " virtual : so the function can be overrided by the other contract"
+        favnum = _fav; // assigning the value of favnum with the value of _fav
     }
 
-    function ret() public view returns (uint256) {
-        return favnum;
+    function ret() public view returns (uint256) { // creating function to return the value of favnum "view keyword used to make the function viewable to other devs and to create getter function to get
+        return favnum; //returning the favnum value
     }
 
     function add(string memory _name, uint256 _favnums) public { // creating function that stores or add new plps with there name and favnum "there is name new keyword called "memory : this keyword used store temp var it's going to exist during the the call of function""

@@ -23,12 +23,12 @@ simplestorage[] public Listofss; // creating a DArray or List for storing the de
         Listofss.push(SS); // pushing the SS to the Listofss array
     }
 
-    function store(uint256 ssindex, uint256 ssnumber) public {
-        Listofss[ssindex].store(ssnumber);
+    function store(uint256 ssindex, uint256 ssnumber) public { // we have to pass the index of the contract we want to store the number in the Listofss array, and the number we want to store, ssnumber, ssindex, we can't use the SS here because it will create a new contract every time we call the store function.
+        Listofss[ssindex].store(ssnumber); // calling the store function of the simplestorage contract using the index of the contract we want to store the number in the Listofss array
     }
 
-    function get(uint256 ssindex) public view returns (uint256) {
-        return Listofss[ssindex].ret();
+    function get(uint256 ssindex) public view returns (uint256) { // we have to pass the index of the contract we want to get the number from the Listofss array 
+        return Listofss[ssindex].ret(); // calling the ret function of the simplestorage contract using the index of the contract we want to get the number from the Listofss array and returning the number(ssnumber) to the caller( function caller )
     }
     
 }
